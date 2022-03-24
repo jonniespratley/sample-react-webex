@@ -1,6 +1,6 @@
 .App {
-  height: 100vh;
   background: var(--wxc-primary-background);
+  height: 100%;
 }
 .App-layout {
   display: grid;
@@ -10,6 +10,8 @@
 }
 
 .App-sidebar {
+  overflow: auto;
+  height: 90vh;
 }
 
 .App-content {

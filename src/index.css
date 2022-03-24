@@ -1,3 +1,6 @@
+html, body {
+  
+}
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+
 }
 
 * {
@@ -70,4 +75,35 @@ button {
   margin-right: 1rem;
   font-size: 1.1rem;
   min-width: 100px;
+}
+
+
+
+.space-list {
+
+  color: var(--wxc-text-color);
+  margin: 0 .5rem;
+  padding: 0;
+  font-size: 1rem;
+  user-select: none;
+  overflow: hidden;
+  margin-left: 0.5rem;
+}
+
+.space-list li {
+  padding: .9rem;
+  /* font-size: 1.2rem; */
+  list-style: none;
+  white-space: pre;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.space-list-item:active, .space-list-item.selected {
+  background:  rgba(255, 255, 255, 0.07);
+}
+.space-list-item:hover {
+
+  background:  rgba(255, 255, 255, 0.07);
 }
