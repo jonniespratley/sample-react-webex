@@ -1,0 +1,44 @@
+{
+  "name": "sample-react-webex",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "source": "src/index.html",
+  "browserslist": "> 0.25%, not dead",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build"
+  },
+  "targets": {
+    "default": {
+      "includeNodeModules": true
+    }
+  },
+  "engines": {
+    "node": "14"
+  },
+  "dependencies": {
+    "@webex/components": "^1.265.0",
+    "@webex/sdk-component-adapter": "^1.106.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-error-boundary": "^3.1.4",
+    "react-window": "^1.8.6",
+    "rxjs": "^6.5.4",
+    "webex": "^1.157.0"
+  },
+  "devDependencies": {
+    "@parcel/config-default": "^2.4.0",
+    "@parcel/transformer-raw": "^2.4.0",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.4.0",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "url": "^0.11.0",
+    "util": "^0.12.4"
+  }
+}
