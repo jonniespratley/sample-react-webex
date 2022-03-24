@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import Webex from "webex";
 import WebexSDKAdapter from "@webex/sdk-component-adapter";
-import { WebexDataProvider } from "@webex/components";
+import { WebexDataProvider, WebexMessaging } from "@webex/components";
 
 import {
-  TestWebexActivity,
+    VirtualActivityStream,
   TestActivityPanel,
   Panel,
   SpaceList,
@@ -47,9 +47,14 @@ const AppSandbox = () => {
     setAdapterConnected(false);
   };
 
+  const [room, setRoom] = useState(null);
   const handleClick = (room) => {
+   
       console.log('setRoom', room);
+      setRoom(room);
   }
+
+
 
   useEffect(() => {
     async function doConnect() {
@@ -72,13 +77,22 @@ const AppSandbox = () => {
           <h2>Sample Webex App</h2>
         </div>
       </div>
+      {!adapterConnected && <WebexMessaging/>}
+      
       {adapterConnected && (
         <WebexDataProvider adapter={adapter.current}>
           <div className="App-layout">
             <div className="App-sidebar">
-              <SpaceList adapter={adapter.current} onClick={handleClick}/>
+              <SpaceList 
+                selectedRoom={room}
+                adapter={adapter.current} 
+                onClick={handleClick}/>
             </div>
-            <div className="App-content"></div>
+            <div className="App-content">
+                
+                {room && <VirtualActivityStream 
+                    room={room}/>}
+            </div>
           </div>
         </WebexDataProvider>
       )}

@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 
 import { fromSDKRoom } from "../utils";
 
-export function SpaceList({ adapter, onClick }) {
+export function SpaceList({ adapter, onClick, selectedRoom }) {
  
    const [rooms, setRooms] = useState([]);
 
@@ -38,7 +38,7 @@ export function SpaceList({ adapter, onClick }) {
   return (
     <ul className="space-list">
       {rooms && rooms.map(room => (
-          <li className="space-list-item" key={room.ID} onClick={() => {
+          <li className={`space-list-item ${selectedRoom && selectedRoom.ID === room.ID ? 'selected': '' }`} key={room.ID} onClick={() => {
               handleClick(room);
           }}>
               {room.title}
