@@ -4,15 +4,21 @@ import ReactDOM from 'react-dom';
 //import '@webex/components/dist/css/webex-components.css';
 import './index.css';
 
+//import App from './App';
 import AppSandbox from './AppSandbox';
 
 const AppRoot = () => {
     return (<div>App ROot</div>)
-}
+} 
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppSandbox />
+    <div>
+      
+      <AppSandbox />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -21,3 +27,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 //reportWebVitals();
+ 

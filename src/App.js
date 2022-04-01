@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import { ErrorFallback } from "./components";
 import Webex from "webex";
 import WebexSDKAdapter from "@webex/sdk-component-adapter";
 import {
@@ -191,6 +193,7 @@ function App() {
                 Disconnect
               </button>
             </fieldset>
+           
             <form onSubmit={handleSubmit}>
               <fieldset>
                 <legend>Rooms</legend>
@@ -274,8 +277,6 @@ function App() {
                 </Panel>
               )*/}
 
-
-
               {/*formData.activityID && (
                 <Panel title="WebexActivity">
                   {activityIDs &&
@@ -283,7 +284,7 @@ function App() {
                       <WebexActivity activityID={o} key={index} />
                     ))}
                 </Panel>
-                    )*/}
+                    )*/}  
               <Panel>
                 {formData.roomID && (
                   <WebexActivityStream
@@ -304,10 +305,10 @@ function App() {
                 </form>
               </Panel>
 
-              {/*<ErrorBoundary FallbackComponent={ErrorFallback}>
+              {<ErrorBoundary FallbackComponent={ErrorFallback}>
                 <TestWebexActivity roomID={formData.roomID || roomID} />
               </ErrorBoundary>
-                */}
+                }
             </WebexDataProvider>
           )}
         </div>
@@ -316,4 +317,5 @@ function App() {
   );
 }
 
-export default App;
+
+  export default App;

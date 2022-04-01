@@ -18,24 +18,30 @@
   "engines": {
     "node": "14"
   },
+  "alias": {
+    "_@webex/components": "/Users/jspratle/Github/components/src/index.js",
+    "@webex/sdk-component-adapter": "../sdk-component-adapter/src/index.js"
+  },
   "dependencies": {
-    "@webex/components": "^1.265.0",
-    "@webex/sdk-component-adapter": "^1.106.0",
+    "@webex/components": "^1.267.3",
+    "@webex/sdk-component-adapter": "^1.108.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-error-boundary": "^3.1.4",
     "react-window": "^1.8.6",
+    "react-window-infinite-loader": "^1.0.7",
     "rxjs": "^6.5.4",
     "webex": "^1.157.0"
   },
   "devDependencies": {
-    "@parcel/config-default": "^2.4.0",
-    "@parcel/transformer-raw": "^2.4.0",
+    "@parcel/config-default": "^2.4.1",
+    "@parcel/transformer-raw": "^2.4.1",
+    "@parcel/transformer-sass": "^2.4.1",
     "crypto-browserify": "^3.12.0",
     "events": "^3.3.0",
     "os-browserify": "^0.3.0",
-    "parcel": "^2.4.0",
+    "parcel": "^2.4.1",
     "querystring-es3": "^0.2.1",
     "stream-browserify": "^3.0.0",
     "url": "^0.11.0",

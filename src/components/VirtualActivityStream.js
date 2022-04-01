@@ -1,8 +1,10 @@
 import { WebexActivityStream } from '@webex/components';
-import React from 'react';
+import React,  { useEffect } from 'react';
 
 export const VirtualActivityStream = ({room}) => {
-
+    useEffect(() => {
+        console.log('use Effect', room);
+    }, [room])
     return (
         <div>
           

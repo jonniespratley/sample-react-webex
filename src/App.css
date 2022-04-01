@@ -17,6 +17,7 @@
 .App-content {
   background: var(--wxc-secondary-background);
   border-top-left-radius: 10px;
+  overflow: auto;
 }
 
 .App-logo {

@@ -1,8 +1,7 @@
 import React from "react";
 import { Panel } from "./Panel";
 
-
-const TestActivityPanel = ({ title = "Test Panel", activityID }) => {
+export const TestActivityPanel = ({ title = "Test Panel", activityID }) => {
   const activity = useActivity(activityID);
   const person = {}; //usePerson(activity?.personID);
 
