@@ -20,7 +20,7 @@
   },
   "alias": {
     "_@webex/components": "/Users/jspratle/Github/components/src/index.js",
-    "@webex/sdk-component-adapter": "../sdk-component-adapter/src/index.js"
+    "@webex/sdk-component-adapter": "../sdk-component-adapter/src/index.js" 
   },
   "dependencies": {
     "@webex/components": "^1.267.3",

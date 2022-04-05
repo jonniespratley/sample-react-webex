@@ -1,10 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback, memo} from "react";
+
+import { useWhyDidYouUpdate } from "../hooks";
 
 
 import { fromSDKRoom } from "../utils";
 
-export function SpaceList({ adapter, onClick, selectedRoom }) {
- 
+export function SpaceList(props) {
+  const { adapter, onClick, selectedRoom } = props;
+
+   useWhyDidYouUpdate("SpaceList", props);
    const [rooms, setRooms] = useState([]);
 
    const loadRooms = (e) => {
@@ -29,16 +33,17 @@ export function SpaceList({ adapter, onClick, selectedRoom }) {
     }
    }, [adapter])
 
-   const handleClick = (room) => {
+   const handleClick = useCallback((room) => {
        if(onClick){
         onClick(room)
        }
-   }
+   })
 
   return (
     <ul className="space-list">
       {rooms && rooms.map(room => (
-          <li className={`space-list-item ${selectedRoom && selectedRoom.ID === room.ID ? 'selected': '' }`} key={room.ID} onClick={() => {
+          <li className={`space-list-item ${selectedRoom && selectedRoom.ID === room.ID ? 'selected': '' }`} key={room.ID} 
+          onClick={() => {
               handleClick(room);
           }}>
               {room.title}
