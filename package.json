@@ -12,19 +12,23 @@
   },
   "targets": {
     "default": {
-      "includeNodeModules": true
+      "includeNodeModules": {
+        "react": false
+      }
     }
   },
   "engines": {
-    "node": "14"
+    "node": ">=14"
   },
   "alias": {
-    "_@webex/components": "/Users/jspratle/Github/components/src/index.js",
-    "@webex/sdk-component-adapter": "../sdk-component-adapter/src/index.js" 
+    "react": "./node_modules/react",
+    "react-dom": "./node_modules/react-dom",
+    "@webex/components": "../components/src/index.js",
+    "@webex/sdk-component-adapter": "../sdk-component-adapter/src/index.js"
   },
   "dependencies": {
     "@webex/components": "^1.267.3",
-    "@webex/sdk-component-adapter": "^1.108.1",
+    "@webex/sdk-component-adapter": "^1.23.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -36,6 +40,8 @@
   },
   "devDependencies": {
     "@parcel/config-default": "^2.4.1",
+    "@parcel/optimizer-data-url": "^2.4.1",
+    "@parcel/transformer-inline-string": "^2.4.1",
     "@parcel/transformer-raw": "^2.4.1",
     "@parcel/transformer-sass": "^2.4.1",
     "crypto-browserify": "^3.12.0",

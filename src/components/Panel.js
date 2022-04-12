@@ -9,3 +9,4 @@ export const Panel = ({ title, children }) => (
     <ErrorBoundary FallbackComponent={ErrorFallback}>{children}</ErrorBoundary>
   </div>
 );
+

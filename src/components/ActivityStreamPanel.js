@@ -11,9 +11,7 @@ function useForceRender(interval) {
   }, [interval]);
 }
 
-
-
-export const ActivityStreamPanel = ({ title = "Test Panel", roomID, activities }) => {
+export const ActivityStreamPanel = ({ title = "Test Panel", roomID, activities = [] }) => {
   //useForceRender(2000);
   return (
     <WebexActivityStream

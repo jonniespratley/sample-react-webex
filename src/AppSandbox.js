@@ -13,6 +13,7 @@ import {
   Panel,
   SpaceList,
   ActivityStreamPanel,
+  TestWebexActivity,
 } from "./components";
 
 import "./App.css";
@@ -116,9 +117,13 @@ const AppSandbox = () => {
             </div>
 
             <div className="App-content">
+              <TestWebexActivity />
+              <br/>
+              <TestActivityPanel />
               {room && (
                 <Panel title={room.title}>
-                 <ActivityStreamPanel roomID={roomID} />
+                  <WebexActivityStream roomID={roomID}/>
+                 
 
                   <form onSubmit={handleCreateMessage}>
                     <fieldset className="flex">
